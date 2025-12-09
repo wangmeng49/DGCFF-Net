@@ -1,2 +1,2 @@
 # DGCFF-Net
-![Network Architecture](DGCFFNet.pdf)
+![Network Architecture](DGCFFNet.png)
