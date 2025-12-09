@@ -1,8 +1,4 @@
 
-# spatial and temporal feature fusion for change detection of remote sensing images
-# STNet11
-# Author: xwma
-# Time: 2022.11.2
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
