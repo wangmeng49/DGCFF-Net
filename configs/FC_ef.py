@@ -1,4 +1,4 @@
-net = 'unet'   # 这里写你想用的模型名字，比如 'stnet' 或 'unet'
+net = 'unet'   # 这里写你想用的模型名字，比如  'unet'
 
 ######################## base_config #########################
 epoch = 200
@@ -78,3 +78,4 @@ metric_cfg2 = dict(
     average='none',
     num_classes=num_class,
 )
+
