@@ -1,4 +1,4 @@
-net = 'seifnet'#没改过来
+net = 'seifnet'
 
 ######################## base_config #########################
 epoch = 200
@@ -78,3 +78,4 @@ metric_cfg2 = dict(
     average='none',
     num_classes=num_class,
 )
+
