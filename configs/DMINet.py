@@ -1,5 +1,4 @@
-net = 'dminet'#没改过来
-
+net = 'dminet'
 ######################## base_config #########################
 epoch = 200
 gpus = [0]
@@ -78,3 +77,4 @@ metric_cfg2 = dict(
     average='none',
     num_classes=num_class,
 )
+
