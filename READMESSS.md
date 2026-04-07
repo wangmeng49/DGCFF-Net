@@ -3,7 +3,6 @@
 This repository contains the official implementation of the paper:
 
 **"Difference-Guided and Contextual Feature Fusion for Efficient Change Detection in Remote Sensing Imagery"**
-![Network Architecture](DGCFFNet.png)
 
 submitted to *The Visual Computer*.
 
@@ -17,6 +16,9 @@ It introduces:
 
 * Difference-Guided Fusion (DGF)
 * Contextual Feature Fusion (CFF)
+
+## 🧠 Network Architecture
+![Network Architecture](DGCFFNet.png)
 
 The model achieves strong performance with only **14.65M parameters** and **11.88G FLOPs**.
 
