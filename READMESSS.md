@@ -155,13 +155,20 @@ python test.py -c configs/STNet.py \
 
 ## 📊 Reproducibility
 
-The results reported in our paper can be reproduced using this codebase with the provided settings.
+The experimental results reported in the paper can be reproduced using the provided code, configurations, and dataset settings.
+
+We provide:
+- Complete training and testing scripts
+- Predefined configuration files
+- Standardized dataset structure
+
+Please follow the instructions above to reproduce the results in Table 1.
 
 ---
 
 ## 📎 Code
 
-GitHub: https://github.com/你的仓库链接
+GitHub: https://github.com/wangmeng49/DGCFF-Net/
 
 ---
 
@@ -174,3 +181,12 @@ If you find this work useful, please cite our paper.
 ## ⚠️ Note
 
 This code is directly related to the manuscript submitted to *The Visual Computer*.
+
+
+```bibtex
+@article{dgcffnet2026,
+  title={Difference-Guided and Contextual Feature Fusion for Efficient Change Detection in Remote Sensing Imagery},
+  author={Anonymous},
+  journal={The Visual Computer},
+  year={2026}
+}
