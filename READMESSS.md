@@ -75,62 +75,57 @@ Download link: http://gpcv.whu.edu.cn/data/building_dataset.html
 
 ---
 
-## 📒 Folder Structure
+## 📁 Directory Structure
 
-  Prepare the following folders to organize this repo:
-  
-  DGCFF-Net
-          ├── rscd (code)
-          ├── work_dirs (save the model weights and training logs)
-          │   └─CLCD_BS4_epoch200 (dataset)
-          │       └─stnet (model)
-          │           └─version_0 (version)
-          │              │  └─ckpts
-          │              │      ├─test (the best ckpts in test set)
-          │              │      └─val (the best ckpts in validation set)
-          │              ├─log (tensorboard logs)
-          │              ├─train_metrics.txt (train & val results per epoch)
-          │              ├─test_metrics_max.txt (the best test results)
-          │              └─test_metrics_rest.txt (other test results)
-          └── data
-              ├── LEVIR_CD
-              │   ├── train
-              │   │   ├── A
-              │   │   │   └── images1.png
-              │   │   ├── B
-              │   │   │   └── images2.png
-              │   │   └── label
-              │   │       └── label.png
-              │   ├── val (the same with train)
-              │   └── test(the same with train)
-              ├── WHU_CD
-              │   ├── train
-              │   │   ├── image1
-              │   │   │   └── images1.png
-              │   │   ├── image2
-              │   │   │   └── images2.png
-              │   │   └── label
-              │   │       └── label.png
-              │   ├── val (the same with train)
-              │   └── test(the same with train)
-              └── SYSU_CD
-                  ├── train
-                  │   ├── time1
-                  │   │   └── images1.png
-                  │   ├── time2
-                  │   │   └── images2.png
-                  │   └── label
-                  │       └── label.png
-                  ├── val (the same with train)
-                  └── test(the same with train)
+Please organize the project directory as follows:
 
+```
+DGCFF-Net/
+├── rscd/                         # source code
+├── work_dirs/                    # training outputs
+│   └── CLCD_BS4_epoch200/
+│       └── stnet/
+│           └── version_0/
+│               ├── ckpts/
+│               │   ├── test/     # best checkpoints on test set
+│               │   └── val/      # best checkpoints on validation set
+│               ├── log/          # TensorBoard logs
+│               ├── train_metrics.txt
+│               ├── test_metrics_max.txt
+│               └── test_metrics_rest.txt
+└── data/
+    ├── LEVIR_CD/
+    │   ├── train/
+    │   │   ├── A/
+    │   │   ├── B/
+    │   │   └── label/
+    │   ├── val/
+    │   └── test/
+    ├── WHU_CD/
+    │   ├── train/
+    │   │   ├── image1/
+    │   │   ├── image2/
+    │   │   └── label/
+    │   ├── val/
+    │   └── test/
+    └── SYSU_CD/
+        ├── train/
+        │   ├── time1/
+        │   ├── time2/
+        │   └── label/
+        ├── val/
+        └── test/
+```
 
 ---
 
-## ⚠️ Note
+## 📌 Notes
 
-Please download the datasets from their official sources.
-We do not redistribute the datasets due to copyright restrictions.
+* `rscd/` contains the implementation of DGCFF-Net
+* `work_dirs/` stores model checkpoints, logs, and evaluation results
+* `data/` contains all datasets organized in a unified structure
+
+Make sure the dataset paths match the configuration files before training.
 
 
 ---
