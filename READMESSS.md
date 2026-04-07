@@ -3,6 +3,7 @@
 This repository contains the official implementation of the paper:
 
 **"Difference-Guided and Contextual Feature Fusion for Efficient Change Detection in Remote Sensing Imagery"**
+![Network Architecture](DGCFFNet.png)
 
 submitted to *The Visual Computer*.
 
