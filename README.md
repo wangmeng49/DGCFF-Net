@@ -69,13 +69,14 @@ Download link: http://gpcv.whu.edu.cn/data/building_dataset.html
 
 ## 📌 Data Preprocessing
 
-* All images are cropped into **256×256 patches**
-* Data augmentation includes:
+* Images are cropped into 256×256 patches
+* Data augmentation:
 
   * Random flipping
   * Rotation
-* Normalization follows standard settings in remote sensing change detection
-
+* Standard normalization is applied
+  
+We follow the same data splits as previous works for fair comparison.
 ---
 
 ## 📁 Directory Structure
