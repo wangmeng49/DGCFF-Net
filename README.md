@@ -147,9 +147,9 @@ python train.py -c configs/DGCFFNet.py
 ## 🔍 Testing
 
 ```bash
-python test.py -c configs/STNet.py \
-  --ckpt work_dirs/CLCD_BS4_epoch200/stnet/version_1/ckpts/test/test_change_f1 \
-  --output_dir work_dirs/CLCD_BS4_epoch200/stnet/version_1/ckpts/test \
+python test.py -c configs/DGCFFNet.py \
+  --ckpt work_dirs/CLCD_BS4_epoch200/dgcffnet/version_1/ckpts/test/test_change_f1 \
+  --output_dir work_dirs/CLCD_BS4_epoch200/dgcffnet/version_1/ckpts/test \
 ```
 
 ---
