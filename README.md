@@ -15,8 +15,8 @@ DGCFF-Net is a lightweight deep learning network for remote sensing change detec
 
 It introduces:
 
-* Difference-Guided Fusion (DGF)
-* Contextual Feature Fusion (CFF)
+* Difference-Guided Fusion (DGF)：Explicitly models temporal variations and suppresses false positives.(Implementation:/rscd/models/decoderheads/DGCFFnet.py)
+* Contextual Feature Fusion (CFF):Integrates multi-scale features for enhanced edge preservation.(Implementation:/rscd/models/decoderheads/DGCFFnet.py)
 
 ## 🧠 Network Architecture
 ![Network Architecture](DGCFFNet.png)
