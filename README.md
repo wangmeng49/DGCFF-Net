@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/1112739354.svg)](https://doi.org/10.5281/zenodo.19522499)
 # DGCFF-Net
 
 This repository contains the official implementation of the paper:
