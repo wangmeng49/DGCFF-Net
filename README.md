@@ -15,11 +15,11 @@ DGCFF-Net is a highly efficient, lightweight deep learning architecture designed
 
 * **Difference-Guided Fusion (DGF):** Explicitly models temporal variations between bi-temporal images and suppresses false positive changes via coordinate attention mechanisms.
 
-    *Implementation: rscd/models/decoderheads/DGCFFnet.py
+      * Implementation: rscd/models/decoderheads/DGCFFnet.py
 
 * **Contextual Feature Fusion (CFF):** Integrates multi-scale features leveraging self-attention and channel attention, enhancing edge preservation and sensitivity to subtle changes.
 
-    *Implementation: rscd/models/decoderheads/DGCFFnet.py
+      * Implementation: rscd/models/decoderheads/DGCFFnet.py
 
 ## 🧠 Network Architecture
 ![Network Architecture](DGCFFNet.png)
