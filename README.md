@@ -1,22 +1,25 @@
 [![DOI](https://zenodo.org/badge/1112739354.svg)](https://doi.org/10.5281/zenodo.19522499)
 # DGCFF-Net
 
-This repository contains the official implementation of the paper:
+This repository contains the official PyTorch implementation of the paper:
 
-**"Difference-Guided and Contextual Feature Fusion for Efficient Change Detection in Remote Sensing Imagery"**
-
-submitted to *The Visual Computer*.
+**"Difference-Guided and Contextual Feature Fusion for Efficient Change Detection in Remote Sensing Imagery"**(Currently under review at The Visual Computer).
 
 ---
 
 ## 📌 Overview
 
-DGCFF-Net is a lightweight deep learning network for remote sensing change detection.
+DGCFF-Net is a highly efficient, lightweight deep learning architecture designed for remote sensing change detection. By balancing accuracy and computational overhead, the model achieves strong performance with only **14.65M** parameters and **11.88G FLOPs**.
 
-It introduces:
+**Key Algorithmic Implementations:**
 
-* Difference-Guided Fusion (DGF)：Explicitly models temporal variations and suppresses false positives.(Implementation:/rscd/models/decoderheads/DGCFFnet.py)
-* Contextual Feature Fusion (CFF):Integrates multi-scale features for enhanced edge preservation.(Implementation:/rscd/models/decoderheads/DGCFFnet.py)
+* **Difference-Guided Fusion (DGF):** Explicitly models temporal variations between bi-temporal images and suppresses false positive changes via coordinate attention mechanisms.
+
+    *Implementation: rscd/models/decoderheads/DGCFFnet.py
+
+* **Contextual Feature Fusion (CFF):** Integrates multi-scale features leveraging self-attention and channel attention, enhancing edge preservation and sensitivity to subtle changes.
+
+    *Implementation: rscd/models/decoderheads/DGCFFnet.py
 
 ## 🧠 Network Architecture
 ![Network Architecture](DGCFFNet.png)
@@ -31,9 +34,18 @@ The model achieves strong performance with only **14.65M parameters** and **11.8
 * PyTorch: 2.0.0
 * CUDA: 11.7
 
-Install dependencies:
+Installation via Conda:
+We highly recommend using a Conda environment to manage dependencies and ensure reproducibility.
 
 ```bash
+# Create and activate the conda environment
+conda create -n dgcff python=3.9 -y
+conda activate dgcff
+
+# Install PyTorch with CUDA 11.7 support
+conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.7 -c pytorch -c nvidia
+
+# Install remaining dependencies
 pip install -r requirements.txt
 ```
 
@@ -41,8 +53,7 @@ pip install -r requirements.txt
 
 ## 📂 Dataset
 
-We evaluate our method on three publicly available remote sensing change detection datasets:
-
+We evaluate our method on three publicly available remote sensing change detection datasets. Please follow the links below to download the raw data:
 ### 1. LEVIR-CD
 
 A large-scale dataset for building change detection.
@@ -137,7 +148,7 @@ Make sure the dataset paths match the configuration files before training.
 
 ## 🚀 Training
 
-Example:
+To train the DGCFF-Net model from scratch, ensure your dataset paths in configs/DGCFFNet.py are correct and run:
 
 ```bash
 python train.py -c configs/DGCFFNet.py
@@ -146,7 +157,7 @@ python train.py -c configs/DGCFFNet.py
 ---
 
 ## 🔍 Testing
-
+To evaluate a trained model, use the testing script and point it to your specific checkpoint:
 ```bash
 python test.py -c configs/DGCFFNet.py \
   --ckpt work_dirs/CLCD_BS4_epoch200/dgcffnet/version_1/ckpts/test/test_change_f1 \
@@ -155,35 +166,18 @@ python test.py -c configs/DGCFFNet.py \
 
 ---
 
-## 📊 Reproducibility
+## 📊 Reproducibility & Code Availability
 
-The experimental results reported in the paper can be reproduced using the provided code, configurations, and dataset settings.
+The experimental results reported in the paper (e.g., 91.09% F1-score on LEVIR-CD) can be fully reproduced using the provided codebase, predefined configurations, and standardized dataset structures.
 
-We provide:
-- Complete training and testing scripts
-- Predefined configuration files
-- Standardized dataset structure
-
-Please follow the instructions above to reproduce the results in Table 1.
+GitHub Repository: https://github.com/wangmeng49/DGCFF-Net/
 
 ---
 
-## 📎 Code
+## 📖 Citation & Acknowledgment
+⚠️ Important Note: This codebase is directly related to the manuscript currently under review at The Visual Computer.
 
-GitHub: https://github.com/wangmeng49/DGCFF-Net/
-
----
-
-## 📖 Citation
-
-If you find this work useful, please cite our paper.
-
----
-
-## ⚠️ Note
-
-This code is directly related to the manuscript submitted to *The Visual Computer*.
-
+If you find this code, our architectural design, or the experimental results useful for your own research, we kindly urge you to cite our manuscript:
 
 ```bibtex
 @article{dgcffnet2026,
